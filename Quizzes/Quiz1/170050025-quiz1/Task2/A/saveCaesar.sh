@@ -1,0 +1,94 @@
+#! /bin/bash
+
+read  cipher
+
+foo(){
+	if [ $1 == "A" ] ;then
+		echo $cipher | tr ABCDEFGHIJKLMNOPQRSTUVWXYZ ABCDEFGHIJKLMNOPQRSTUVWXYZ
+
+	elif [ $1 == "Z" ] ;then
+		echo $cipher | tr ABCDEFGHIJKLMNOPQRSTUVWXYZ BCDEFGHIJKLMNOPQRSTUVWXYZA
+
+	elif [ $1 == "Y" ] ;then
+		echo $cipher | tr  ABCDEFGHIJKLMNOPQRSTUVWXYZ CDEFGHIJKLMNOPQRSTUVWXYZAB
+
+	elif [ $1 == "X" ] ;then
+		echo $cipher | tr  ABCDEFGHIJKLMNOPQRSTUVWXYZ DEFGHIJKLMNOPQRSTUVWXYZABC
+
+	elif [ $1 == "W" ] ;then
+		echo $cipher | tr  ABCDEFGHIJKLMNOPQRSTUVWXYZ EFGHIJKLMNOPQRSTUVWXYZABCD
+
+	elif [ $1 == "V" ] ;then
+		echo $cipher | tr  ABCDEFGHIJKLMNOPQRSTUVWXYZ FGHIJKLMNOPQRSTUVWXYZABCDE
+
+	elif [ $1 == "U" ] ;then
+		echo $cipher | tr ABCDEFGHIJKLMNOPQRSTUVWXYZ GHIJKLMNOPQRSTUVWXYZABCDEF
+
+	elif [ $1 == "T" ] ;then
+		echo $cipher | tr  ABCDEFGHIJKLMNOPQRSTUVWXYZ HIJKLMNOPQRSTUVWXYZABCDEFG
+
+	elif [ $1 == "S" ] ;then
+		echo $cipher | tr ABCDEFGHIJKLMNOPQRSTUVWXYZ IJKLMNOPQRSTUVWXYZABCDEFGH
+
+	elif [ $1 == "R" ] ;then
+		echo $cipher | tr  ABCDEFGHIJKLMNOPQRSTUVWXYZ JKLMNOPQRSTUVWXYZABCDEFGHI
+
+	elif [ $1 == "Q" ] ;then
+		echo $cipher | tr  ABCDEFGHIJKLMNOPQRSTUVWXYZ KLMNOPQRSTUVWXYZABCDEFGHIJ
+
+	elif [ $1 == "P" ] ;then
+		echo $cipher | tr  ABCDEFGHIJKLMNOPQRSTUVWXYZ LMNOPQRSTUVWXYZABCDEFGHIJK
+
+	elif [ $1 == "O" ] ;then
+		echo $cipher | tr  ABCDEFGHIJKLMNOPQRSTUVWXYZ MNOPQRSTUVWXYZABCDEFGHIJKL
+
+	elif [ $1 == "N" ] ;then
+		echo $cipher | tr  ABCDEFGHIJKLMNOPQRSTUVWXYZ NOPQRSTUVWXYZABCDEFGHIJKLM
+
+	elif [ $1 == "M" ] ;then
+		echo $cipher | tr  ABCDEFGHIJKLMNOPQRSTUVWXYZ OPQRSTUVWXYZABCDEFGHIJKLMN
+
+	elif [ $1 == "L" ] ;then
+		echo $cipher | tr  ABCDEFGHIJKLMNOPQRSTUVWXYZ PQRSTUVWXYZABCDEFGHIJKLMNO
+
+	elif [ $1 == "K" ] ;then
+		echo $cipher | tr  ABCDEFGHIJKLMNOPQRSTUVWXYZ QRSTUVWXYZABCDEFGHIJKLMNOP
+
+	elif [ $1 == "J" ] ;then
+		echo $cipher | tr  ABCDEFGHIJKLMNOPQRSTUVWXYZ RSTUVWXYZABCDEFGHIJKLMNOPQ
+
+	elif [ $1 == "I" ] ;then
+		echo $cipher | tr  ABCDEFGHIJKLMNOPQRSTUVWXYZ STUVWXYZABCDEFGHIJKLMNOPQR
+
+	elif [ $1 == "H" ] ;then
+		echo $cipher | tr  ABCDEFGHIJKLMNOPQRSTUVWXYZ TUVWXYZABCDEFGHIJKLMNOPQRS
+
+	elif [ $1 == "G" ] ;then
+		echo $cipher | tr  ABCDEFGHIJKLMNOPQRSTUVWXYZ UVWXYZABCDEFGHIJKLMNOPQRST
+
+	elif [ $1 == "F" ] ;then
+		echo $cipher | tr  ABCDEFGHIJKLMNOPQRSTUVWXYZ VWXYZABCDEFGHIJKLMNOPQRSTU
+
+	elif [ $1 == "E" ] ;then
+		echo $cipher | tr  ABCDEFGHIJKLMNOPQRSTUVWXYZ WXYZABCDEFGHIJKLMNOPQRSTUV
+
+	elif [ $1 == "D" ] ;then
+		echo $cipher | tr  ABCDEFGHIJKLMNOPQRSTUVWXYZ XYZABCDEFGHIJKLMNOPQRSTUVW
+
+	elif [ $1 == "C" ] ;then
+		echo $cipher | tr  ABCDEFGHIJKLMNOPQRSTUVWXYZ YZABCDEFGHIJKLMNOPQRSTUVWX
+
+	elif [ $1 == "B" ] ;then
+		echo $cipher | tr  ABCDEFGHIJKLMNOPQRSTUVWXYZ ZABCDEFGHIJKLMNOPQRSTUVWXY
+
+	else 
+		echo "Invalid"
+
+	fi
+
+}
+
+for i in A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
+do
+	echo "$i $( foo $i )"
+done

@@ -1,0 +1,28 @@
+import sqlite3
+import csv
+
+if __name__=="__main__":
+	ipl =sqlite3.connect("ipl.db")
+	cur = ipl.cursor()
+	file=open('team.csv')
+	reader=csv.reader(file)
+	data=list(reader)
+	cur.executemany('''insert into team values(?,?)''',data[1:])
+	file=open('match.csv')
+	reader=csv.reader(file)
+	data=list(reader)
+	cur.executemany('''insert into match values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)''',data[1:])
+	file=open('player.csv')
+	reader=csv.reader(file)
+	data=list(reader)
+	cur.executemany('''insert into player values(?,?,?,?,?,?)''',data[1:])
+	file=open('player_match.csv')
+	reader=csv.reader(file)
+	data=list(reader)
+	cur.executemany('''insert into player_match values(?,?,?,?,?,?,?)''',data[1:])
+	file=open('ball_by_ball.csv')
+	reader=csv.reader(file)
+	data=list(reader)
+	cur.executemany('''insert into ball_by_ball values(?,?,?,?,?,?,?,?,?,?,?)''',data[1:])
+	ipl.commit()
+	ipl.close()

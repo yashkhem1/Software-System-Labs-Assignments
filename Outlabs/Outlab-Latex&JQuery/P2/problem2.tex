@@ -1,0 +1,137 @@
+\documentclass{beamer}
+\usepackage[utf8]{inputenc}
+
+\usepackage{utopia} %font utopia imported
+
+\usetheme{Berlin}
+\usecolortheme{default}
+\setbeamertemplate{title page}[default][rounded=true,shadow=true]
+
+%%Thanks to Tex Overflow for this code
+
+\usepackage{tikz}
+\usetikzlibrary{shadings}
+
+\colorlet{titleleft}{blue!70!black}
+\colorlet{titleright}{black}
+
+\setbeamercolor*{frametitle}{fg=white}
+
+\makeatletter
+\pgfdeclarehorizontalshading[titleleft,titleright]{beamer@frametitleshade}{\paperheight}{%
+  color(0pt)=(titleleft);
+  color(\paperwidth)=(titleright)}
+
+\defbeamertemplate*{frametitle}{horizontal shading}
+{%
+  \nointerlineskip%
+  %\vskip-2pt%
+  \hbox{\leavevmode
+    \advance\beamer@leftmargin by -12bp%
+    \advance\beamer@rightmargin by -12bp%
+    \beamer@tempdim=\textwidth%
+    \advance\beamer@tempdim by \beamer@leftmargin%
+    \advance\beamer@tempdim by \beamer@rightmargin%
+    \hskip-\Gm@lmargin\hbox{%
+      \setbox\beamer@tempbox=\hbox{\begin{minipage}[b]{\paperwidth}%
+          \vbox{}\vskip-.75ex%
+          \leftskip0.3cm%
+          \rightskip0.3cm plus1fil\leavevmode
+          \insertframetitle%
+          \ifx\insertframesubtitle\@empty%
+            \strut\par%
+          \else
+            \par{\usebeamerfont*{framesubtitle}{\usebeamercolor[fg]{framesubtitle}\insertframesubtitle}\strut\par}%
+          \fi%
+          \nointerlineskip
+          \vbox{}%
+          \end{minipage}}%
+      \beamer@tempdim=\ht\beamer@tempbox%
+      \advance\beamer@tempdim by 2pt%
+      \begin{pgfpicture}{0pt}{0pt}{\paperwidth}{\beamer@tempdim}
+        \usebeamercolor{frametitle right}
+        \pgfpathrectangle{\pgfpointorigin}{\pgfpoint{\paperwidth}{\beamer@tempdim}}
+        \pgfusepath{clip}
+        \pgftext[left,base]{\pgfuseshading{beamer@frametitleshade}}
+      \end{pgfpicture}
+      \hskip-\paperwidth%
+      \box\beamer@tempbox%
+    }%
+    \hskip-\Gm@rmargin%
+  }%
+    \vskip-2pt
+}
+\makeatother
+
+%%Thanks to Tex OverFlow for the above code.
+
+
+%albatross beaver beetle crane default dolphin dove fly lily orchid rose seagull seahorse sidebartab structure whale wolverine
+
+\title[CS251: Software Lab]
+{CS251: Software Lab}
+\subtitle{\LaTeX \space Outlab 7}
+\author[YAY, 170050025, 170050055, 170070015]
+{YAY \\ 170050025 \\ 170050055 \\ 170070015}
+\institute[Indian Institute of Technology, Bombay]
+{Indian Institute of Technology, Bombay}
+
+% \usepackage{pgf}  
+% \logo{\pgfputat{\pgfxy(9.45,1.5)}{\pgfbox[center,base]{\includegraphics[height=1.7cm]{logo.png}}}} 
+
+\logo{\includegraphics[height=1cm]{logo.png}\vspace{15pt}\hspace{15pt}}
+
+\begin{document}
+
+
+\frame{\titlepage}
+
+
+
+\begin{frame}
+\frametitle{Table of Contents}
+\tableofcontents
+\end{frame}
+
+\section{Itemize and Enumerate}
+
+\begin{frame}{Itemize}
+
+\begin{itemize}
+    \item \LaTeX \space typesets a file of text using the TEX program.
+    \item \LaTeX \space is widely used in academia for the communication and
+    publication of scientific documents in many fields, including
+    mathematics, physics, computer science, statistics, economics
+    and political science.
+    \item \LaTeX \space can be used as a standalone document preparation
+    system or as an intermediate format.
+    \item \LaTeX \space is intended to provide a high-level language that
+    accesses the power of TeX in an easier way for writers.
+    
+\end{itemize}
+    
+\end{frame}
+
+\begin{frame}{Enumerate}
+
+\begin{enumerate}
+    \item \LaTeX \space typesets a file of text using the TEX program.
+    \item \LaTeX \space is widely used in academia for the communication and
+    publication of scientific documents in many fields, including
+    mathematics, physics, computer science, statistics, economics
+    and political science.
+    \item \LaTeX \space can be used as a standalone document preparation
+    system or as an intermediate format.
+    \item \LaTeX \space is intended to provide a high-level language that
+    accesses the power of TeX in an easier way for writers. 
+\end{enumerate}
+    
+\end{frame}
+
+\begin{frame}
+
+ \centering \huge
+  Thank You
+\end{frame}
+
+\end{document}

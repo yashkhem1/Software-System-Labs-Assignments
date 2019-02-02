@@ -1,0 +1,5 @@
+find Data/students  -name '*.txt' -mmin +30 -delete
+touch crontab.cron
+echo "0 17 * * 3 find Data/students  -name '*.txt' -mmin +30 -delete" > crontab.cron
+crontab crontab.cron
+crontab -r

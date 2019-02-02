@@ -1,0 +1,4 @@
+touch iit/names.txt
+cat Data/find.txt > iit/names.txt
+sort iit/names.txt 
+cat iit/*

@@ -1,0 +1,12 @@
+Task4-
+IF the  ratings are same, we sort them by the cost.
+Task 6-
+MAke team doesn't return any database
+Players.json contains the updated db
+If player is alredy in the team, we are printing try another transfer (Player already in a team)
+Task 7-
+Some precision may be off in printing the angles
+Task 3-
+In analysis, we print only upto 4 decimals
+
+

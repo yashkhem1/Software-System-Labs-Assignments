@@ -1,0 +1,7 @@
+ls iit
+ls --sort=time iit
+ls -Sr iit
+ls -r iit
+ls --sort=time -r iit
+ls -S iit
+

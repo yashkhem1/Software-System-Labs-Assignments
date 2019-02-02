@@ -1,0 +1,2 @@
+In problem 1, the code was compiled on ShareLaTeX, and we did not download the required libraries. Also, there was an error of missing $ sign, which ShareLaTeX suppressed.
+In Problem 3, we have changed only the top list of the Text heading, and not the one in the section below. Further, in the 5th subtask, we have not disabled the lilnk, as the question did not ask to.

@@ -1,0 +1,4 @@
+1) In Task 2D, the name of the directories given should be of same format, i.e. if one of them is 'Dir1' then other must be 'Dir2' and if one of them is 'Dir1/' then the other must be 'Dir2/'..
+2) In task 6C I have assumed that lure.awk is present in the current working directory.
+3) In task 3 I have assumed that the path given to symbolic links is not in relative format.
+4) In question 4 I have not echoed "#output is'

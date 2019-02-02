@@ -1,0 +1,5 @@
+tar -xzvf Data.tar.gz
+mkdir iitb
+find Data/students -type f -iname "*iitb*" -exec cp {} iitb \;
+echo "please apply for phd before Jan 2019" | tee -a $(find iitb -type f -iname "*201[6-9]*")
+cal jan 2019 | tee -a iitb/*201[6-9]*

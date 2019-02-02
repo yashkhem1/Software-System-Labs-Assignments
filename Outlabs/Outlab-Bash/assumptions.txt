@@ -1,0 +1,6 @@
+1) Assumed that all files are placed in the same folder as that of Data.tar.gz2) 
+
+2) In problem 6 the first command is deleting by shell command and after that there is delete by crontab command.
+
+3)I have also deregisterd the crontab file at the end.
+

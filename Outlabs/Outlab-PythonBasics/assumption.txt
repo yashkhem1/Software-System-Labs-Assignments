@@ -1,0 +1,2 @@
+We have assumed that in each question there is no "---" line as header and footer.
+We have assumed that codes are exactly 3 lettered words.

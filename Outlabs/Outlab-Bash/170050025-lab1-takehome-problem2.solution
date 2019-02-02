@@ -1,0 +1,6 @@
+mkdir iit
+touch iit/iit1.txt iit/iit2.doc iit/iit3.odt
+cat Data/info.txt > iit/iit1.txt
+cat Data/info.txt > iit/iit2.doc 
+cat Data/info.txt > iit/iit3.odt
+sed -n '2,6p' iit/iit1.txt > iit/temp.txt
